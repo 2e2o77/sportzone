@@ -1,0 +1,28 @@
+.success-page {
+  text-align: center; padding: 80px 20px; max-width: 500px; margin: 0 auto;
+}
+.success-animation {
+  font-size: 88px; margin-bottom: 16px;
+  animation: bounce 0.6s ease;
+}
+@keyframes bounce {
+  0%  { transform: scale(0.3); opacity: 0; }
+  60% { transform: scale(1.15); }
+  100%{ transform: scale(1); opacity: 1; }
+}
+.success-title { font-size: 28px; font-weight: 900; color: var(--success); margin-bottom: 10px; }
+.success-msg { color: var(--text2); margin-bottom: 32px; font-size: 15px; }
+
+.order-details {
+  background: var(--bg2); border-radius: 12px; padding: 20px;
+  margin-bottom: 32px; border: 1px solid var(--border);
+}
+.order-detail-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.order-detail-row:last-child { border-bottom: none; }
+.order-id-val { font-weight: 800; color: var(--primary); font-size: 15px; }
+
+.success-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }

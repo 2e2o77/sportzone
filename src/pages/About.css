@@ -1,0 +1,47 @@
+.about-hero {
+  background: var(--bg2); border-radius: 16px; padding: 48px 40px;
+  text-align: center; margin-bottom: 32px; border: 1px solid var(--border);
+}
+.about-logo { font-size: 56px; margin-bottom: 12px; }
+.about-hero h1 { font-size: 32px; font-weight: 900; margin-bottom: 12px; }
+.about-hero > p { color: var(--text2); max-width: 600px; margin: 0 auto 28px; line-height: 1.7; }
+.about-stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.about-stat { text-align: center; }
+.about-stat strong { display: block; font-size: 26px; font-weight: 900; color: var(--primary); }
+.about-stat span { font-size: 13px; color: var(--text3); }
+
+.about-story {
+  display: flex; align-items: center; gap: 40px; padding: 32px;
+  margin-bottom: 8px;
+}
+.story-text h2 { font-size: 22px; font-weight: 800; margin-bottom: 12px; }
+.story-text p { color: var(--text2); line-height: 1.75; }
+.story-img { font-size: 80px; flex-shrink: 0; opacity: 0.6; }
+
+.values-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px;
+  margin-bottom: 8px;
+}
+.value-card { padding: 24px; text-align: center; }
+.value-icon { font-size: 36px; margin-bottom: 10px; }
+.value-title { font-weight: 800; font-size: 15px; margin-bottom: 6px; }
+.value-desc { font-size: 13px; color: var(--text2); }
+
+.team-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px;
+}
+.team-card { padding: 24px 16px; text-align: center; }
+.team-avatar {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--primary); color: #fff;
+  font-size: 20px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;
+}
+.team-name { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+.team-role { font-size: 12px; color: var(--text3); }
+
+@media (max-width: 600px) {
+  .about-story { flex-direction: column; text-align: center; }
+  .story-img { display: none; }
+  .about-hero { padding: 32px 20px; }
+}
