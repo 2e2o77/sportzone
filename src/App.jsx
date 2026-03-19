@@ -12,6 +12,7 @@ import Blog from './pages/Blog'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Success from './pages/Success'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/about"       element={<About />} />
           <Route path="/contact"     element={<Contact />} />
           <Route path="/success"     element={<Success />} />
+          <Route path="*"            element={<NotFound />} />
         </Routes>
         <Footer />
         <Toast />

@@ -12,7 +12,16 @@ export default function ProductCard({ product }) {
   return (
     <div className="product-card card" onClick={() => navigate(`/product/${product.id}`)}>
       <div className="product-img">
-        <span className="product-emoji">{product.emoji}</span>
+        {product.image ? (
+          <img
+            src={product.image}
+            alt={name}
+            style={{ width:'100%', height:'100%', objectFit:'cover' }}
+            onError={e => { e.target.style.display = 'none' }}
+          />
+        ) : (
+          <span className="product-emoji">{product.emoji}</span>
+        )}
         {!product.stock && (
           <span className="out-badge badge badge-warning">{t('out_stock')}</span>
         )}
@@ -25,11 +34,9 @@ export default function ProductCard({ product }) {
           {product.stock ? (
             <button
               className="add-btn"
-              onClick={(e) => { e.stopPropagation(); addToCart(product) }}
+              onClick={e => { e.stopPropagation(); addToCart(product) }}
               title={t('add_cart')}
-            >
-              +
-            </button>
+            >+</button>
           ) : (
             <span className="no-stock">—</span>
           )}
